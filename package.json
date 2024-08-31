@@ -3,7 +3,3 @@
     "react": "^18.0.2"
   }
 }
-
-"scripts": {
-  "build": "react-scripts build"
-}
