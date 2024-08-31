@@ -4,8 +4,6 @@
   }
 }
 
-{
-  "scripts": {
-    "build": "[my-framework] build --output public"
-  }
+"scripts": {
+  "build": "react-scripts build"
 }
