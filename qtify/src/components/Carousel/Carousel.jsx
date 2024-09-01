@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css'; // Ensure this path is correct
+import 'swiper/swiper.min.css';
 import { Navigation } from 'swiper/modules'; // Use the correct path for Swiper modules
 import styles from './Carousel.module.css';
 
