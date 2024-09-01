@@ -1,0 +1,27 @@
+.section {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .albumGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .albumGrid > div {
+    flex: 1 0 calc(14.28% - 16px);
+    max-width: calc(14.28% - 16px);
+  }
+  
+  .carousel {
+    
+  }
+  

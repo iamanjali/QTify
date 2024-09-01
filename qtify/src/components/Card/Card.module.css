@@ -1,18 +1,47 @@
-.container {
+/* .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; /* Adjust spacing between cards */
-    padding: 16px; /* Add padding around the container */
+    gap: 16px;
+    padding: 16px;
   }
   
   .card {
     border-radius: 10px;
-    overflow: hidden; /* Ensure the image does not overflow */
-    width: 100%; /* Adjust width if needed */
-    max-width: 345px; /* Adjust max-width if needed */
+    overflow: hidden; 
+    width: 100%;
+    max-width: 345px;
   }
   
   .followsContainer {
-    margin-bottom: 8px; /* Adjust margin to fit design */
+    margin-bottom: 8px;
+  }
+   */
+
+   .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+  }
+  
+  .albumImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .chip {
+    background-color: var(--chip-bg-color);
+    color: var(--chip-text-color);
+    margin-bottom: 8px;
+  }
+  
+  .albumName {
+    font-size: 16px;
+    color: #333;
   }
   
