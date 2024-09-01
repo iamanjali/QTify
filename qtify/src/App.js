@@ -33,9 +33,9 @@ function App() {
       </header> */}
 
     <Router>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Navbar />} />
+        <Route path="/" element={<Hero />} />
       </Routes>
     </Router>
     </div>
