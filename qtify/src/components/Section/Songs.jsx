@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from '../Card/Card';
 import Carousel from '../Carousel/Carousel';
 import { Tabs, Tab } from '@mui/material';
-import styles from './SongsSection.module.css';
+import styles from './Songs.module.css';
 
 const Songs = () => {
   const [songs, setSongs] = useState([]);
