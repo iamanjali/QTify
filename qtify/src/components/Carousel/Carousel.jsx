@@ -33,17 +33,18 @@
 
 
 import React, { useRef } from 'react';
-import { Swiper, SwiperSlide, Navigation } from 'swiper/react';
+import { Swiper, SwiperSlide, Navigation as SwiperNavigation } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/bundle';
 
 const Carousel = ({ items }) => {
   const swiperRef = useRef(null);
 
+
   return (
     <div className="carousel-container">
       <Swiper
-        modules={[Navigation]}
+        modules={[SwiperNavigation]}
         spaceBetween={10}
         slidesPerView={3}
         navigation
