@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../Card/Card';
 import styles from './Section.module.css';
+import { Grid, Item} from '@mui/base/Grid'
 
 const Section = () => {
   const [albums, setAlbums] = useState([]);
@@ -33,14 +34,23 @@ const Section = () => {
       </div>
 
       <div className={styles.albumGrid}>
-        {displayedAlbums.map(album => (
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 6, md: 8 }}>
+            <Item>
+            {displayedAlbums.map(album => (
           <Card 
             key={album.id}
             imageUrl={album.image}
             name={album.title}
             follows={album.follows}
           />
-        ))}
+        ))} 
+            </Item>
+        </Grid>
+    </Grid>
+
+
+       
       </div>
 
       {!collapsed && albums.length > 7 && (
