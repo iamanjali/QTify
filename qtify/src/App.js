@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Hero from './components/Hero/Hero'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
@@ -17,6 +20,12 @@ function App() {
         >
           Learn React
         </a>
+
+        <Switch>
+            <Route exact path="/"><Navbar /></Route>
+           <Route exact path="/hero"><Hero /></Route>
+           
+        </Switch>
       </header>
     </div>
   );
