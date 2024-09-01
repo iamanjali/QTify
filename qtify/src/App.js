@@ -32,7 +32,7 @@ function App() {
 
       </header> */}
  <Navbar />
- <Hero />
+
 
     <Router>
       <Routes>
