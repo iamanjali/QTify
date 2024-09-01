@@ -124,7 +124,7 @@ return (
 };
 
 
-export const Page = () => {
+const Page = () => {
     return (
       <div>
         <Section title="Top Albums" url="https://qtify-backend-labs.crio.do/albums/top" />
@@ -134,5 +134,5 @@ export const Page = () => {
     );
   };
 
-export default Section;
+export default Page;
 

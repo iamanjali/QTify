@@ -40,7 +40,7 @@ function App() {
         <Route path="/" element={<>
               <Navbar />
               <Hero />
-              <Section />
+              {/* <Section /> */}
               <Page />
             </>} />
       </Routes>
