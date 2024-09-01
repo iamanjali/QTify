@@ -31,10 +31,12 @@ function App() {
 
 
       </header> */}
+ <Navbar />
+ <Hero />
 
     <Router>
       <Routes>
-        <Route path="/" element={<Navbar />} />
+        {/* <Route path="/" element={<Navbar />} /> */}
         <Route path="/hero" element={<Hero />} />
       </Routes>
     </Router>
