@@ -7,7 +7,7 @@ import Carousel from '../Carousel/Carousel';
 
 const Section = ({ title, url }) => {
   const [albums, setAlbums] = useState([]);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   useEffect(() => {
     axios.get(url)
