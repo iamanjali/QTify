@@ -46,8 +46,29 @@ const Section = () => {
         </button>
       </div>
 
-      <div className={styles.albumGrid}>
-      {/* <Grid container spacing={2}> */}
+      {!collapsed ? (
+        <div className={styles.albumGrid}>
+          <Grid container spacing={2}>
+            {albums.map(album => (
+              <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={album.id}>
+                <Card 
+                  key={album.id}
+                  imageUrl={album.image}
+                  name={album.title}
+                  follow={album.follows}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+      ) : (
+        <div className={styles.carousel}>
+          <Carousel items={items} />  {/* Render the Carousel when collapsed is true */}
+        </div>
+      )}
+
+      {/* <div className={styles.albumGrid}>
+
       
         
             {displayedAlbums.map(album => (
@@ -62,14 +83,12 @@ const Section = () => {
         ))} 
             
         
-    {/* </Grid> */}
+
 
 
        
-      </div>
-      <div className={styles.carousel}>
-          <Carousel items={items} />  
-        </div>
+      </div> */}
+      
       {/* {!collapsed && albums.length > 7 && (
         <div className={styles.carousel}>
         
