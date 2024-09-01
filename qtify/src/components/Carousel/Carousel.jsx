@@ -1,13 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import { Navigation } from 'swiper/modules'; 
+import 'swiper/swiper.min.css'; // Correct import path for Swiper v9+
+import { Navigation } from 'swiper/modules'; // Import Navigation module if you use it
 
 const Carousel = ({ items }) => {
   return (
     <div className="carousel-container">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation]} // Ensure Navigation is correctly imported and used
         spaceBetween={10}
         slidesPerView={3}
         navigation
@@ -19,7 +19,7 @@ const Carousel = ({ items }) => {
       >
         {items.map(item => (
           <SwiperSlide key={item.id}>
-            {item.component}
+            {item.component} {/* Render the content or component inside the slide */}
           </SwiperSlide>
         ))}
       </Swiper>
@@ -28,6 +28,7 @@ const Carousel = ({ items }) => {
 };
 
 export default Carousel;
+
 
 
 // import React, { useRef } from 'react';

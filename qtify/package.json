@@ -41,12 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "exports": {
-    ".": "./dist/swiper.esm.js",
-    "./bundle": "./dist/swiper.bundle.js",
-    "./css": "./dist/css",
-    "./react": "./react/swiper-react.js",
-    "./navigation": "./dist/swiper.navigation.js"
   }
 }
