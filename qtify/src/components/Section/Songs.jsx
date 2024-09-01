@@ -43,7 +43,7 @@ const Songs = () => {
         key={song.id}
         imageUrl={song.image}
         name={song.title}
-        likes={song.likes}
+        follow={song.likes}
       />
     ),
   }));
