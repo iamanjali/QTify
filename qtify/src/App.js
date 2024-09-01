@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Section from './components/Section/Section';
 import Card from './components/Card/Card';
+import Page from './components/Section/Section'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Navbar />
               <Hero />
               <Section />
+              <Page />
             </>} />
       </Routes>
     </Router>

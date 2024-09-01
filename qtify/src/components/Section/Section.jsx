@@ -5,19 +5,20 @@ import styles from './Section.module.css';
 import { Grid } from '@mui/material';
 import Carousel from '../Carousel/Carousel';
 
-const Section = () => {
+const Section = ({ title, url }) => {
   const [albums, setAlbums] = useState([]);
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
-    axios.get('https://qtify-backend-labs.crio.do/albums/top')
+    axios.get(url)
       .then(response => {
         setAlbums(response.data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
-  }, []);
+
+  }, [url]);
 
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
@@ -102,7 +103,7 @@ const Section = () => {
 return (
     <div className={styles.section}>
       <div className={styles.header}>
-        <h2>Top Albums</h2>
+        <h2>{title}</h2>
         <button onClick={toggleCollapse}>
           {collapsed ? 'Show All' : 'Collapse'}
         </button>
@@ -122,4 +123,16 @@ return (
   );
 };
 
+
+export const Page = () => {
+    return (
+      <div>
+        <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
+
+        <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
+      </div>
+    );
+  };
+
 export default Section;
+
