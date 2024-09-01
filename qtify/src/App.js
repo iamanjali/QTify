@@ -31,13 +31,11 @@ function App() {
 
 
       </header> */}
- <Navbar />
-
 
     <Router>
       <Routes>
         {/* <Route path="/" element={<Navbar />} /> */}
-        <Route path="/hero" element={<Hero />} />
+        <Route path="/" element={<Hero />} />
       </Routes>
     </Router>
     </div>
