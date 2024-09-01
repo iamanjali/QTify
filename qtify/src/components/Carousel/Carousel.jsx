@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
+import 'swiper/css';
+import 'swiper/css/bundle';
 import { Navigation } from 'swiper';
 
 const Carousel = ({ items }) => {
