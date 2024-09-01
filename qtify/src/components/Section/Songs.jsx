@@ -76,6 +76,13 @@ const Songs = () => {
       {/* <div className={styles.carousel}>
         <Carousel items={items} />
       </div> */}
+      <div className={styles.albumGrid}>
+          {items.map(item => (
+            <div key={item.id} className={styles.gridItem}>
+              {item.component}
+            </div>
+          ))}
+        </div>
     </div>
   );
 };
