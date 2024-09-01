@@ -35,7 +35,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Navbar />} />
-        <Route path="/" element={<Hero />} />
+        <Route path="/hero" element={<Hero />} />
       </Routes>
     </Router>
     </div>
