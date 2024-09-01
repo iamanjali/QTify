@@ -53,11 +53,11 @@ const Section = () => {
        
       </div>
 
-      {!collapsed && albums.length > 7 && (
+      {/* {!collapsed && albums.length > 7 && (
         <div className={styles.carousel}>
        
         </div>
-      )}
+      )} */}
     </div>
   );
 };

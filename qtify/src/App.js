@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
+import Section from './components/Section/Section';
 import Card from './components/Card/Card';
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
         <Route path="/" element={<>
               <Navbar />
               <Hero />
-              <Card />
+              <Section />
             </>} />
       </Routes>
     </Router>
