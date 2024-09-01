@@ -16,7 +16,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "axios": "^1.7.7",
-    "swiper": "^11.1.12"
+    "swiper": "^9.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
