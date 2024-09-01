@@ -1,14 +1,11 @@
 import React from 'react';
-//import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/swiper-bundle.min.css';
-//import Swiper from 'swiper/bundle';
-//import { Navigation } from 'swiper';
-import Swiper, { Navigation } from 'swiper/bundle';
-import styles from './Carousel.module.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
+import { Navigation } from 'swiper';
 
 const Carousel = ({ items }) => {
   return (
-    <div className={styles.carouselContainer}>
+    <div className="carousel-container">
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
@@ -22,7 +19,7 @@ const Carousel = ({ items }) => {
       >
         {items.map(item => (
           <SwiperSlide key={item.id}>
-            <div className={styles.cardWrapper}>
+            <div className="card-wrapper">
               {item.component}
             </div>
           </SwiperSlide>
