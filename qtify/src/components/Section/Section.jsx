@@ -42,7 +42,7 @@ const Section = () => {
             key={album.id}
             imageUrl={album.image}
             name={album.title}
-            follows={album.follows}
+            follow={album.follows}
           />
         ))} 
             </Item>

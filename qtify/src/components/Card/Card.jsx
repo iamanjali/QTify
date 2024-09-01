@@ -46,12 +46,12 @@ import React from 'react';
 import { Chip } from '@mui/material';
 import styles from './Card.module.css';
 
-const Card = ({ id, imageUrl, name, follows }) => {
+const Card = ({ id, imageUrl, name, follow }) => {
     return (
       <div className={styles.card} key={id}>
         <img src={imageUrl} alt={name} className={styles.albumImage} />
         <div className={styles.info}>
-          <Chip label={`${follows ?? 0} Follows`} className={styles.chip} />
+          <Chip label={`${follow ?? 0} Follows`} className={styles.chip} />
           <h3 className={styles.albumName}>{name}</h3>
         </div>
       </div>
