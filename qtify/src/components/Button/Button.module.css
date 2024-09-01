@@ -1,0 +1,22 @@
+.button {
+    background-color: #121212;
+    color: #34C94B;
+    border: 1px solid #34C94B;
+    font-family: 'Poppins', sans-serif;
+    width: 170px;
+    border: 1px;
+    height: 47px;
+    top: 30px;
+    left: 1238px;
+    border-radius: 12px;
+    padding: 10px 16px 10px 16px;
+    cursor: pointer;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  .button:hover {
+    background-color: #333;
+    cursor: pointer;
+  }
