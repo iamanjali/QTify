@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Route, Switch } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import Hero from './components/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 
@@ -21,11 +21,13 @@ function App() {
           Learn React
         </a>
 
-        <Switch>
-            <Route exact path="/"><Navbar /></Route>
-           <Route exact path="/hero"><Hero /></Route>
-           
-        </Switch>
+    <Router>
+      <Routes>
+        <Route exact path="/"><Navbar /></Route>
+        <Route exact path="/hero"><Hero /></Route>
+      </Routes>
+    </Router>
+
       </header>
     </div>
   );
