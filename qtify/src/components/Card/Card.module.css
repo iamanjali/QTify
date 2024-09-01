@@ -1,5 +1,18 @@
-.card {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    padding: 16px; 
+  }
+  
+  .card {
     border-radius: 10px;
     overflow: hidden; 
+    width: 100%;
+    max-width: 345px; 
+  }
+  
+  .followsContainer {
+    margin-bottom: 8px;
   }
   
