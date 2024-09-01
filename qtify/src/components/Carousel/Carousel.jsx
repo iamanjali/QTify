@@ -8,10 +8,10 @@ const Carousel = ({ items }) => {
     <BootstrapCarousel className={styles.carousel}>
       {items.map((item, index) => (
         <BootstrapCarousel.Item key={index}>
-          {item.component}
-          <BootstrapCarousel.Caption>
-    
-          </BootstrapCarousel.Caption>
+          {/* {item.component} */}
+          <div className={styles.carouselItemContainer}>
+            {item.component}
+          </div>
         </BootstrapCarousel.Item>
       ))}
     </BootstrapCarousel>
