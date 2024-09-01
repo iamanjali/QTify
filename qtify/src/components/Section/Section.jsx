@@ -33,7 +33,7 @@ const Section = () => {
       </div>
 
       <div className={styles.albumGrid}>
-        {albums.map(album => (
+        {displayedAlbums.map(album => (
           <Card 
             key={album.id}
             imageUrl={album.image}

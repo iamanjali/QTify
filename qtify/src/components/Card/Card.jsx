@@ -46,18 +46,19 @@ import React from 'react';
 import { Chip } from '@mui/material';
 import styles from './Card.module.css';
 
-const Card = ({ imageUrl, name, follows }) => {
-  return (
-    <div className={styles.card}>
-      <img src={imageUrl} alt={name} className={styles.albumImage} />
-      <div className={styles.info}>
-        <Chip label={`${follows} Follows`} className={styles.chip} />
-        <h3 className={styles.albumName}>{name}</h3>
+const Card = ({ id, imageUrl, name, follows }) => {
+    return (
+      <div className={styles.card} key={id}>
+        <img src={imageUrl} alt={name} className={styles.albumImage} />
+        <div className={styles.info}>
+          <Chip label={`${follows ?? 0} Follows`} className={styles.chip} />
+          <h3 className={styles.albumName}>{name}</h3>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
+  
+  export default Card;
 
-export default Card;
 
 
