@@ -35,7 +35,10 @@ function App() {
     <Router>
       <Routes>
         {/* <Route path="/" element={<Navbar />} /> */}
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<>
+              <Navbar />
+              <Hero />
+            </>} />
       </Routes>
     </Router>
     </div>
