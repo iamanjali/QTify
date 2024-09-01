@@ -73,9 +73,9 @@ const Songs = () => {
     <Tab key={genre.key} label={genre.label} value={genre.key} />
   ))}
 </Tabs>
-      <div className={styles.carousel}>
+      {/* <div className={styles.carousel}>
         <Carousel items={items} />
-      </div>
+      </div> */}
     </div>
   );
 };
