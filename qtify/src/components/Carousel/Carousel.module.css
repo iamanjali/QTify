@@ -1,0 +1,11 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+  }
+  

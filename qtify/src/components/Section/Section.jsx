@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../Card/Card';
 import styles from './Section.module.css';
-import { Grid, Button } from '@mui/material';
+import { Grid } from '@mui/material';
+import Carousel from '../Carousel/Carousel';
 
 const Section = () => {
   const [albums, setAlbums] = useState([]);
@@ -22,44 +23,79 @@ const Section = () => {
     setCollapsed(!collapsed);
   };
 
-  const displayedAlbums = collapsed ? albums.slice(0, 7) : albums;
+  const items = albums.map(album => ({
+    id: album.id,
+    component: (
+      <Card
+        key={album.id}
+        imageUrl={album.image}
+        name={album.title}
+        follow={album.follows}
+      />
+    ),
+  }));
 
-  return (
+//   const displayedAlbums = collapsed ? albums.slice(0, 7) : albums;
+
+//   return (
+//     <div className={styles.section}>
+//       <div className={styles.header}>
+//         <h2>Top Albums</h2>
+//         <button onClick={toggleCollapse}>
+//           {collapsed ? 'Expand' : 'Collapse'}
+//         </button>
+//       </div>
+
+//       <div className={styles.albumGrid}>
+//       {/* <Grid container spacing={2}> */}
+      
+        
+//             {displayedAlbums.map(album => (
+//                 <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={album.id}>
+//           <Card 
+//             key={album.id}
+//             imageUrl={album.image}
+//             name={album.title}
+//             follow={album.follows}
+//           />
+//           </Grid>
+//         ))} 
+            
+        
+//     {/* </Grid> */}
+
+
+       
+//       </div>
+
+//       {/* {!collapsed && albums.length > 7 && (
+//         <div className={styles.carousel}>
+       
+//         </div>
+//       )} */}
+//     </div>
+//   );
+
+
+return (
     <div className={styles.section}>
       <div className={styles.header}>
         <h2>Top Albums</h2>
         <button onClick={toggleCollapse}>
-          {collapsed ? 'Expand' : 'Collapse'}
+          {collapsed ? 'Show All' : 'Collapse'}
         </button>
       </div>
-
-      <div className={styles.albumGrid}>
-      {/* <Grid container spacing={2}> */}
-      
-        
-            {displayedAlbums.map(album => (
-                <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={album.id}>
-          <Card 
-            key={album.id}
-            imageUrl={album.image}
-            name={album.title}
-            follow={album.follows}
-          />
-          </Grid>
-        ))} 
-            
-        
-    {/* </Grid> */}
-
-
-       
-      </div>
-
-      {/* {!collapsed && albums.length > 7 && (
-        <div className={styles.carousel}>
-       
+      {collapsed ? (
+        <Carousel items={items} />
+      ) : (
+        <div className={styles.albumGrid}>
+          {items.map(item => (
+            <div key={item.id} className={styles.gridItem}>
+              {item.component}
+            </div>
+          ))}
         </div>
-      )} */}
+      )}
     </div>
   );
 };
