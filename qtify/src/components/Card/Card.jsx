@@ -1,5 +1,5 @@
-// import React, { useEffect, useState } from 'react';
-// import { Card as MuiCard, CardContent, CardMedia, Typography, Chip } from '@mui/material';
+ import React, { useState } from 'react';
+ import { Card as MuiCard, CardContent, CardMedia, Typography, Chip } from '@mui/material';
 // import axios from 'axios';
 // import styles from './Card.module.css';
 
@@ -42,20 +42,35 @@
 //   );
 // };
 
-import React from 'react';
-import { Chip } from '@mui/material';
+
 import styles from './Card.module.css';
 
 const Card = ({ id, imageUrl, name, follow }) => {
     return (
-      <div className={styles.card} key={id}>
-        <img src={imageUrl} alt={name} className={styles.albumImage} />
-        <div className={styles.info}>
-          <Chip label={`${follow ?? 0} Follows`} className={styles.chip} />
-          <h3 className={styles.albumName}>{name}</h3>
+        <div className={styles.container}>
+          
+            <MuiCard key={id} className={styles.card} sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                height="140"
+                image={imageUrl}
+                alt={name}
+                sx={{ objectFit: 'cover' }}
+              />
+              
+              <CardContent>
+                <div className={styles.followsContainer}>
+                  <Chip label={`${follow} Follows`} color="primary" />
+                </div>
+                <Typography gutterBottom variant="h5" component="div">
+                  {name}
+                </Typography>
+              </CardContent>
+            </MuiCard>
+         
         </div>
-      </div>
-    );
+      );
+    
   };
   
   export default Card;
