@@ -32,9 +32,9 @@ const Card = () => {
             <div className={styles.followsContainer}>
               <Chip label={`${album.follows} Follows`} color="primary" />
             </div>
-            {/* <Typography gutterBottom variant="h5" component="div">
-              {album.name}
-            </Typography> */}
+            <Typography gutterBottom variant="h5" component="div">
+              {album.title}
+            </Typography>
           </CardContent>
         </MuiCard>
       ))}
