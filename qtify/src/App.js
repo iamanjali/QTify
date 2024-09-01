@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
-
+import Card from './components/Card/Card';
 
 function App() {
   return (
@@ -38,6 +38,7 @@ function App() {
         <Route path="/" element={<>
               <Navbar />
               <Hero />
+              <Card />
             </>} />
       </Routes>
     </Router>
