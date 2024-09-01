@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Route, Router, Routes } from "react-router-dom";
-import Hero from './components/Hero/Hero'
-import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Hero from './components/Hero/Hero';
+import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
   return (
@@ -31,7 +32,12 @@ function App() {
 
       </header> */}
 
+    <Router>
       <Navbar />
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+      </Routes>
+    </Router>
     </div>
   );
 }
