@@ -8,7 +8,6 @@ const Carousel = ({ items }) => {
     <BootstrapCarousel className={styles.carousel}>
       {items.map((item, index) => (
         <BootstrapCarousel.Item key={index}>
-          {/* {item.component} */}
           <div className={styles.carouselItemContainer}>
             {item.component}
           </div>

@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Section from './components/Section/Section';
 import Card from './components/Card/Card';
 import Page from './components/Section/Section'
+import Songs from './components/Section/Songs'
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Hero />
               {/* <Section /> */}
               <Page />
+              <Songs />
             </>} />
       </Routes>
     </Router>
