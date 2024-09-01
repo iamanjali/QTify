@@ -33,6 +33,7 @@
 
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 import 'swiper/css';
 import 'swiper/css/bundle';
 import { Pagination } from 'swiper/modules/pagination';
