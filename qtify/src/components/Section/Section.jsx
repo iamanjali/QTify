@@ -127,9 +127,9 @@ return (
 export const Page = () => {
     return (
       <div>
-        <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
+        <Section title="Top Albums" url="https://qtify-backend-labs.crio.do/albums/top" />
 
-        <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
+        <Section title="New Albums" url="https://qtify-backend-labs.crio.do/albums/new" />
       </div>
     );
   };
