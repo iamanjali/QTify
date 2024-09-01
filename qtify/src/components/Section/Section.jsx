@@ -32,6 +32,7 @@ const Section = ({ title, url }) => {
         imageUrl={album.image}
         name={album.title}
         follow={album.follows}
+        text="Follows"
       />
     ),
   }));

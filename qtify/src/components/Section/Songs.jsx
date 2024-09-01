@@ -44,7 +44,7 @@ const Songs = () => {
         imageUrl={song.image}
         name={song.title}
         follow={song.likes}
-        text="Songs"
+        text="Likes"
       />
     ),
   }));
