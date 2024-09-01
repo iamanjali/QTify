@@ -2,7 +2,7 @@
  import { Card as MuiCard, CardContent, CardMedia, Typography, Chip } from '@mui/material';
 import styles from './Card.module.css';
 
-const Card = ({ id, imageUrl, name, follow }) => {
+const Card = ({ id, imageUrl, name, follow, text }) => {
     return (
         <div className={styles.container}>
           
@@ -17,7 +17,7 @@ const Card = ({ id, imageUrl, name, follow }) => {
               
               <CardContent>
                 <div className={styles.followsContainer}>
-                  <Chip label={`${follow} Follows`} color="primary" />
+                  <Chip label={`${follow} ${text}`} color="primary" />
                 </div>
                 <Typography gutterBottom variant="h5" component="div">
                   {name}
