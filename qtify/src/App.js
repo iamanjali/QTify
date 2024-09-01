@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/Navbar'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,14 +21,17 @@ function App() {
           Learn React
         </a>
 
-    {/* <Router>
+     <Router>
       <Routes>
         <Route exact path="/"><Navbar /></Route>
         <Route exact path="/hero"><Hero /></Route>
       </Routes>
-    </Router> */}
+    </Router> 
 
-      </header>
+
+      </header> */}
+
+      <Navbar />
     </div>
   );
 }
